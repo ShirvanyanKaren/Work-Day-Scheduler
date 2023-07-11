@@ -44,7 +44,6 @@ textarea {
   background-color: #77dd77;
   color: white;
 }
-
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -56,4 +55,14 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+.deleteBtn{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.deleteBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+
 }
