@@ -37,7 +37,19 @@ $(document).ready( function() {
   enterText();
 });
 
+// created for loop that targets the id number tag in html and adds information according to i
+// and the corresponding value in localStorage;
+function enterText() {
+  for (let i = 9; i < 18; i++) {
+    var timeBlock = document.getElementById(i);
+    var textarea = timeBlock.querySelector("textarea");
+    var storage = localStorage.getItem(i);
 
+    if (storage != null) {
+      textarea.value = storage;
+    }
+  }
+}
 
 // created function to dictate the color of the text according to if it's in the past, present, or future
 function ColorText(){
