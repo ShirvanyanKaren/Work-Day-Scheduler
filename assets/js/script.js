@@ -39,4 +39,22 @@ $(document).ready( function() {
 
 
 
+// created function to dictate the color of the text according to if it's in the past, present, or future
+function ColorText(){
+$(".time-block").each(function () {
+  // created schedule time and current date variables to compare, and used parseInt to make id into an integer
+  var scheduleTime = parseInt($(this).attr("id"));
+  var currentDate = dayjs().hour();
+  // added classes defined in css accordingly to past, present, or future
+  if (currentDate > scheduleTime) {
+      $(this).addClass("past");
+  } else if (currentDate < scheduleTime) {
+      $(this).addClass("future");
+  } else {
+      $(this).addClass("present");
+  }
+
+});
+}
+
 
