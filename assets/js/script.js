@@ -57,4 +57,23 @@ $(".time-block").each(function () {
 });
 }
 
+// created on click event listener that saves information depending on which button is pressed
+$('.saveBtn').on('click', function(){
+  // used "this" to select sibling "textarea" of button selected
+var textarea = $(this).siblings('textarea').val()
+  // used "this" again for parent id 
+var parentID = $(this).parent().attr('id')
+  // used local storage to save text according to id
+localStorage.setItem(parentID, textarea)
+});
+
+
+// repeated the same for delete button, but equated 'textarea' to empty after button is pressed
+$('.deleteBtn').on('click', function(){
+var textarea = $(this).siblings('textarea').val('');
+var textarea = $(this).siblings('textarea').val();
+var parentID = $(this).parent().attr('id');
+localStorage.setItem(parentID, textarea);
+});
+
 
